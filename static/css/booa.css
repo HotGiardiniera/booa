@@ -1,0 +1,150 @@
+
+body {
+	font-family: 'Quicksand', sans-serif;
+	font-size: 18px;
+}
+
+.bottom-space {margin-bottom: 50px}
+.top-space {margin-top: 50px}
+.top-space-small {margin-top: 25px}
+.left-space {margin-left: 65px}
+.left-space-xl{margin-left: 105px}
+.right-space {margin-right: 65px}
+.right-space-small {margin-right: 25px}
+.right-space-xl{margin-right: 105px}
+
+#team-page-main{
+	margin-left: 115px;
+	margin-right: 115px;
+}
+a.active{
+	color: white;
+}
+
+/* Nav */
+.navbar-wrapper {
+	margin-top: 20px;
+}
+
+nav.navbar {
+	border-radius: 4px;
+	font-size: 18px;
+}
+
+.navbar > .container div.navbar-brand {
+	font-size: 25px;
+	margin-left: 25px;
+}
+
+.navbar > .container ul {
+	margin-right: 55px;
+}
+
+.navbar-brand,
+.navbar-nav li a {
+    line-height: 35px;
+    color: #000;
+}
+
+
+div.booa-main {
+	margin-top: 30px;
+}
+
+div.booa-main h2{
+	margin-bottom: 30px;
+	font-size: 32px
+}
+
+
+body .container {
+	width: 1270px;
+}
+
+
+.main-img-holder{
+	padding-right: 0;
+}
+img {
+	border-radius: 4px;
+}
+
+
+#main-text{
+	padding-top: 128px;
+	padding-left: 0px;
+	font-size: 18px;
+}
+
+.booa-nav {
+	background-color: #4484ce;
+}
+
+.booa-nav a {
+	color: #fff;
+}
+
+div.bacground-page {
+	margin-left: 70px;
+	margin-right: 70px;
+	margin-top: 30px;
+}
+div.bacground-page h3 {
+	margin-top:25px;
+}
+
+#vision-background {
+	background-image: url(../images/vision_img.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	height: 450px;
+	margin-top: -115px;
+	border-radius: 4px;
+}
+
+.main-text{
+	font-size: 18px;
+}
+
+.text-container {
+	margin: 35px 175px 35px 175px;
+}
+
+.text-container p, ul {
+	margin-bottom: 20px;
+}
+
+.paragraph-picture {
+	margin: 10px 10px 10px 25px;
+}
+
+
+.form-label {
+	text-align: right;
+}
+
+.form-label label{
+	font-weight: normal;
+}
+
+.name-heading {
+	margin-bottom: 10px;
+}
+.team-title {
+	margin-top: 0;
+}
+
+.partner-img{
+	height: 70px;
+}
+
+
+
+
+
+
+
+
+
+
+

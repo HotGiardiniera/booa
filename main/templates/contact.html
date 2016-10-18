@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="container-fluid left-space right-space">
+	<h3>Please write us your questions and comments:</h3>
+	<div class="row top-space">
+		<div class="col-md-6">
+			<form method="POST">
+				{{ form.csrf_token }}
+				<div class="row">
+		    		<label class="col-md-4 form-label">{{ form.firstname.label }}</label>
+		    		<div class="col-md-4">{{ form.firstname(size=22) }}</div>
+		    	</div>
+		    	<div class="row">
+		    		<label class="col-md-4 form-label">{{ form.lastname.label }}</label>
+		    		<div class="col-md-4">{{ form.lastname(size=22) }}</div>
+		    	</div>
+		    	<div class="row">
+		    		<label class="col-md-4 form-label">{{ form.email.label }}</label>
+		    		<div class="col-md-4">{{ form.email(size=22) }}</div>
+		    	</div>
+		    	<div class="row">
+		    		<label class="col-md-4 form-label">{{ form.phonenumber.label }}</label>
+		    		<div class="col-md-4">{{ form.phonenumber(size=22) }}</div>
+		    	</div>
+		    	<div class="row">
+		    		<label class="col-md-4 form-label">{{ form.organization.label }}</label>
+		    		<div class="col-md-4">{{ form.organization(size=22) }}</div>
+		    	</div>
+		    	<div class="row">
+		    		<label class="col-md-4 form-label">{{ form.message.label }}</label>
+		    		<div class="col-md-4">{{ form.message(cols="33", rows="10") }}</div>
+		    	</div>
+		    	<div class="row">
+		    		<label class="col-md-4 form-label"></label>
+		    		<div class="col-md-4"><input type="submit" value="Submit"></div>
+				</div>
+			</form>
+		</div>
+		<div class="col-md-6">
+			<div class="left-space-xl">
+				C/O IMPACT <br />
+				BP 131, Ouidah <br />
+				Atlantique Department <br />
+				Benin <br />
+				<br />
+				<div><i class="glyphicon glyphicon-earphone"></i> PHONE</div>
+				<div><i class="glyphicon glyphicon-envelope"></i> EMAIL</div>
+				<br />
+				You can also find us on <a href="https://www.facebook.com/brasouvertsopenarms/"><strong>Facebook</strong></a>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

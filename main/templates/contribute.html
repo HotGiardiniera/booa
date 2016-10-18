@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="container-fluid">
+	<div class="row text-container">
+		<div class="col-md-8">
+			<div class="right-space-small">
+				<h2><strong>Opportunities to contribute</strong></h2>
+				Financial and in-kind support is greatly appreciated! We are always open to new ideas, potential partnerships and volunteers.
+				<div class="text-center top-space-small">
+	  				<button type="button" class="btn btn-info btn-lg">Donate</button>
+				</div>
+				<div class="top-space-small">
+					Please feel free to contact us if you are interested in other donation options and opportunities.
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4"><img src="{{ STATIC_URL }}images/classroom.jpg" width="300"></div>
+	</div>
+	<div class="row text-center top-space-small text-container">
+		<h2><strong>Partnerships</strong></h2>
+		<div class="col-md-6 text-center">
+			<div class="partner-img">
+				<img src="{{ STATIC_URL }}images/roomie.png" width="115"><br />
+			</div>
+			Rumie distributes tablets loaded with educational materials.
+		</div>
+		<div class="col-md-6 text-center">
+			<div class="partner-img">
+				<img src="{{ STATIC_URL }}images/logo_oml.png" width="185">
+			</div>
+			<p>One Million Lights solicits donations and provides solar lamps.</p>
+		</div>
+	</div>
+	<div class="row text-center top-space-small" id="supporters">
+		<h2><strong>Supporters</strong></h2>
+	</div>
+	<div class="row text-center">
+		<div class="col-md-4 text-center">University of California at Los Angeles (UCLA) School of Law</div>
+		<div class="col-md-4 text-center">Graduate Institute of International and Development Studies</div>
+		<div class="col-md-4 text-center">Aminata Lemdjou</div>
+	</div>
+	<div class="row text-center top-space-small" id="supporters">
+		<div class="col-md-4 text-center">Diane Legbagah Enonfondé</div>
+		<div class="col-md-4 text-center">Gabriel Martinez</div>
+		<div class="col-md-4 text-center">Craig Hill</div>
+	</div>
+	<div class="row text-center top-space-small" id="supporters">
+		<div class="col-md-4 text-center">Vicky Bush-Joseph</div>
+		<div class="col-md-4 text-center">Aline Gertrude Silvis</div>
+		<div class="col-md-4 text-center">Ray Oglesby</div>
+	</div>
+	<div class="row text-center top-space-small" id="supporters">
+		<div class="col-md-4 text-center">James Smyth</div>
+		<div class="col-md-4 text-center">Craig Hill</div>
+		<div class="col-md-4 text-center">Gabriel Martinez</div>
+	</div>
+</div>
+{% endblock %}

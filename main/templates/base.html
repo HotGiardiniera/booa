@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    	<title>Bras Ouverts – Open Arms</title>
+    	<link rel="stylesheet" href="{{ STATIC_URL }}bootstrap3/css/bootstrap.css">
+    	<link rel="stylesheet" href="{{ STATIC_URL }}css/booa.css">
+    	<link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
+    	<script src="{{ STATIC_URL }}js/vendors/jquery.min.js"></script>
+    	<script src="{{ STATIC_URL }}bootstrap3/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div class="navbar-wrapper">
+			<div class="container">
+				<nav class="navbar navbar-inverse navbar-static-top">
+					<div class="container">
+						<div class="navbar-header navbar-brand">Bras Ouverts – Open Arms</div>
+						<div class="right-space">
+							<ul class="nav navbar-nav pull-right">
+                                <li {% if tab == "home" %} class="active" {% endif %}><a href="{{ url_for('main.home') }}">Home</a></li>
+								<li {% if tab == "vision" %} class="active" {% endif %}><a href="{{ url_for('main.vision') }}">Vision</a></li>
+								<li {% if tab == "background" %} class="active" {% endif %}><a href="{{ url_for('main.background') }}">Background</a></li>
+								<li {% if tab == "projects" %} class="active" {% endif %}><a href="{{ url_for('main.projects') }}">Projects</a></li>
+								<li {% if tab == "team" %} class="active" {% endif %}><a href="{{ url_for('main.team') }}">Team</a></li>
+								<li {% if tab == "contribute" %} class="active" {% endif %}><a href="{{ url_for('main.contribute') }}">Contribute</a></li>
+								<li {% if tab == "contact" %} class="active" {% endif %}><a href="{{ url_for('main.contact') }}">Contact</a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="container booa-main">
+			{% block body %}{% endblock %}
+		</div>
+	</body>
+</html>
