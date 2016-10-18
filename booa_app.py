@@ -1,5 +1,6 @@
 import os
 from flask import Flask
+from booa.main.views import *
 
 app = Flask(__name__)
 app.register_blueprint(main)
