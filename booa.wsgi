@@ -1,4 +1,4 @@
 import sys
-sys.path.insert(0, '/home/ubuntu/booa')
+sys.path.insert(0, '/var/www/html/')
 
-from booa import app as application
+from booa import booa_app as application
