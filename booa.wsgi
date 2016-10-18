@@ -1,4 +1,4 @@
 import sys
 sys.path.insert(0, '/var/www/html/')
 
-from booa import booa_app as application
+from booa.booa_app import app as application
