@@ -13,16 +13,16 @@
 			<div class="container">
 				<nav class="navbar navbar-inverse navbar-static-top">
 					<div class="container">
-						<div class="navbar-header navbar-brand">Bras Ouverts – Open Arms</div>
+						<div class="navbar-header navbar-brand"><a {% if tab == "home" %} class="active" {% endif %} href="{{ url_for('main.home') }}">Bras Ouverts – Open Arms</a></div>
 						<div class="right-space">
 							<ul class="nav navbar-nav pull-right">
-                                <li {% if tab == "home" %} class="active" {% endif %}><a href="{{ url_for('main.home') }}">Home</a></li>
 								<li {% if tab == "vision" %} class="active" {% endif %}><a href="{{ url_for('main.vision') }}">Vision</a></li>
 								<li {% if tab == "background" %} class="active" {% endif %}><a href="{{ url_for('main.background') }}">Background</a></li>
 								<li {% if tab == "projects" %} class="active" {% endif %}><a href="{{ url_for('main.projects') }}">Projects</a></li>
 								<li {% if tab == "team" %} class="active" {% endif %}><a href="{{ url_for('main.team') }}">Team</a></li>
 								<li {% if tab == "contribute" %} class="active" {% endif %}><a href="{{ url_for('main.contribute') }}">Contribute</a></li>
 								<li {% if tab == "contact" %} class="active" {% endif %}><a href="{{ url_for('main.contact') }}">Contact</a></li>
+								<li><a href="https://www.paypal.me/BOOA/50">Donate</a></li>
 							</ul>
 						</div>
 					</div>

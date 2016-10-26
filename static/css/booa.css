@@ -17,8 +17,16 @@ body {
 	margin-left: 115px;
 	margin-right: 115px;
 }
-a.active{
+.navbar-header a.active{
 	color: white;
+}
+.navbar-header a:hover {
+	text-decoration: none;
+	color: white;
+}
+
+.navbar-header a {
+	color: #9d9d9d;
 }
 
 /* Nav */
@@ -49,6 +57,7 @@ nav.navbar {
 
 div.booa-main {
 	margin-top: 30px;
+	margin-bottom: 30px;
 }
 
 div.booa-main h2{
