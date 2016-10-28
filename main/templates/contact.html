@@ -4,6 +4,15 @@
 	<h3>Please write us your questions and comments:</h3>
 	<div class="row top-space">
 		<div class="col-md-6">
+			{% with messages = get_flashed_messages() %}
+			  {% if messages %}
+			    <ul class=flashes>
+			    {% for message in messages %}
+			      <li>{{ message }}</li>
+			    {% endfor %}
+			    </ul>
+			  {% endif %}
+			{% endwith %}
 			<form method="POST">
 				{{ form.csrf_token }}
 				<div class="row">

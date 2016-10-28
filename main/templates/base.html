@@ -14,7 +14,7 @@
 				<nav class="navbar navbar-inverse navbar-static-top">
 					<div class="container">
 						<div class="navbar-header navbar-brand"><a {% if tab == "home" %} class="active" {% endif %} href="{{ url_for('main.home') }}">Bras Ouverts – Open Arms</a></div>
-						<div class="right-space">
+						<div>
 							<ul class="nav navbar-nav pull-right">
 								<li {% if tab == "vision" %} class="active" {% endif %}><a href="{{ url_for('main.vision') }}">Vision</a></li>
 								<li {% if tab == "background" %} class="active" {% endif %}><a href="{{ url_for('main.background') }}">Background</a></li>

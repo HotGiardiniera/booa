@@ -5,9 +5,9 @@ from wtforms.fields.html5 import EmailField
 
 
 class ContactForm(FlaskForm):
-	firstname = StringField('First name', [validators.Length(min=1, max=99), validators.DataRequired()])
-	lastname = StringField('Last name', [validators.Length(min=1, max=25), validators.DataRequired()])
+	firstname = StringField('First name', [])
+	lastname = StringField('Last name', [])
 	email = EmailField('Email address', [validators.DataRequired(), validators.Email()])
-	phonenumber = StringField('Phone number', [validators.Length(min=9, max=25), validators.DataRequired()])
-	organization = StringField('Organization', [validators.Length(max=99)])
+	phonenumber = StringField('Phone number', [])
+	organization = StringField('Organization', [])
 	message = StringField('Message', [validators.Length(max=500)], widget=TextArea())
