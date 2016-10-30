@@ -1,4 +1,5 @@
-from flask import Blueprint, render_template, flash, redirect, url_for
+import os
+from flask import Blueprint, render_template, flash, redirect, url_for, request
 from flask.ext.mail import Message
 from booa.main.forms import ContactForm
 
@@ -28,11 +29,16 @@ def team():
 @main.route('/contact', methods=['GET', 'POST'])
 def contact():
     form = ContactForm()
-    if form.validate_on_submit():
+    if form.validate_on_submit() and request.method == "POST":
         from booa.booa_app import mail
         msg = Message("Contact request", sender="brasouvertsopenarms@gmail.com",
-                      recipients=["chris.moirano@gmail.com"])
-        # mail.send(msg)
+                      recipients=[os.environ['APP_EMAIL']])
+        message = "Name: {0} {1}\nEmail: {2}\nPhone: {3}\nOrg: {4}\nMessage: {5}\n"
+        message = message.format(request.form.get('firstname') or "", request.form.get('lastname') or "",
+            request.form['email'], request.form.get('phonenumber'), request.form.get('organization'),
+            request.form.get('message'))
+        msg.body = message
+        mail.send(msg)
         flash('Thank you, we will respond to your message as soon as possible')
         return redirect(url_for('main.contact'))
     ctx = {"tab": "contact", "form": form}
