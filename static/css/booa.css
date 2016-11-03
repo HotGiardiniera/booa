@@ -4,6 +4,10 @@ body {
 	font-size: 18px;
 }
 
+textarea {
+	border-color: #BFBFBF;
+}
+
 .bottom-space {margin-bottom: 50px}
 .top-space {margin-top: 50px}
 .top-space-small {margin-top: 25px}
