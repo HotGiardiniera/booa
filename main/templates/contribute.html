@@ -1,13 +1,12 @@
 {% extends "base.html" %}
 {% block body %}
-<div class="container-fluid">
 	<div class="row text-container">
 		<div class="col-md-8">
 			<div class="right-space-small">
 				<h2><strong>Opportunities to contribute</strong></h2>
 				Financial and in-kind support is greatly appreciated! We are always open to new ideas, potential partnerships and volunteers.
 				<div class="text-center top-space-small">
-	  				<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2PWH9NN5V9DZY" type="button" class="btn btn-info btn-lg">Donate</a>
+	  				<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=2PWH9NN5V9DZY" type="button" class="btn btn-info btn-lg">Donate</a>
 				</div>
 				<div class="top-space-small">
 					Please feel free to <a href="{{ url_for('main.contact') }}">contact us</a> if you are interested in other donation options and opportunities.
@@ -16,27 +15,99 @@
 		</div>
 		<div class="col-md-4"><img src="{{ STATIC_URL }}images/classroom.jpg" width="300"></div>
 	</div>
-	<div class="row text-center top-space-small text-container">
-		<h2><strong>Partnerships</strong></h2>
-		<div class="col-md-6 text-center">
-			<div class="partner-img">
-				<img src="{{ STATIC_URL }}images/roomie.png" width="115"><br />
+	<div class="text-container">
+		<div class="row text-center top-space-small">
+			<div class="col-md-12">
+				<h2><strong>Partnerships &amp; Supporting Institutions</strong></h2>
 			</div>
-			Rumie distributes tablets loaded with educational materials.
 		</div>
-		<div class="col-md-6 text-center">
-			<div class="partner-img">
-				<img src="{{ STATIC_URL }}images/logo_oml.png" width="185">
+		<div class="row">
+			<div class="col-md-3 text-center bottom-space-small">
+				<img src="{{ STATIC_URL }}images/logos/impact.png">
 			</div>
-			<p>One Million Lights solicits donations and provides solar lamps.</p>
+			<div class="col-md-9 text-left bottom-space-small">
+				IMPACT is a Beninese organization that focuses on agricultural and health projects. 
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3 text-center bottom-space-small">
+				<img src="{{ STATIC_URL }}images/logos/roomie.png">
+			</div>
+			<div class="col-md-9 text-left bottom-space-small">
+				Rumie is a registered nonprofit in both the USA and Canada, and it supplies affordable tablets for refugees. BOOA uses six Rumie tablets at the school.
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3 text-center bottom-space-small">
+				<img src="{{ STATIC_URL }}images/logos/logo_oml.png">
+			</div>
+			<div class="col-md-9 text-left bottom-space-small">
+				One Million Lights is a Palo Alto based nonprofit that fundraises and distributes solar lights. BOOA’s light solicitation can be viewed here.
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3 text-center bottom-space-small">
+				<img src="{{ STATIC_URL }}images/logos/cerc_social.png">
+			</div>
+			<div class="col-md-9 text-left bottom-space-small">
+				Cercle Social is a registered nonprofit in Texas that sponsors four high schools in Benin. CS is helping to connect BOOA students with higher education opportunities because our English first language students cannot attend French only public schools.
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3 text-center bottom-space-small">
+				<img src="{{ STATIC_URL }}images/logos/ucla.jpg">
+			</div>
+			<div class="col-md-9 text-left bottom-space-small">
+				The UCLA School of Law sponsors Kathleen Bush-Joseph’s Public Service Law Fellowship with BOOA. We are developing opportunities for UCLA Law students to intern at BOOA the summer of 2017.
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3 text-center bottom-space-small">
+				<img src="{{ STATIC_URL }}images/logos/beeck.png">
+			</div>
+			<div class="col-md-9 text-left bottom-space-small">
+				BOOA is formulating an intern placement plan for the summer of 2018 with Georgetown University’s Beeck Center for Social Impact and Innovation.
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3 text-center bottom-space-small">
+				<img src="{{ STATIC_URL }}images/logos/iheid.png">
+			</div>
+			<div class="col-md-9 text-left bottom-space-small">
+				The Swiss Graduate Institute for International and Development Studies and its Afrique Club provide BOOA with faculty mentoring and fundraising assistance.
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3 text-center bottom-space-small">
+				<img src="{{ STATIC_URL }}images/logos/northwestern.jpg">
+			</div>
+			<div class="col-md-9 text-left bottom-space-small">
+				BOOA is exploring solar and sanitation projects with Northwestern University’s Engineers for a Sustainable World.
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3 text-center bottom-space-small">
+				<img src="{{ STATIC_URL }}images/logos/hinsdale_pl.jpg">
+			</div>
+			<div class="col-md-9 text-left bottom-space-small">
+				The Hinsdale Public Library in Illinois has donated children’s books to BOOA.
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3 text-center bottom-space-small">
+				<img src="{{ STATIC_URL }}images/logos/awesome_foundation.png">
+			</div>
+			<div class="col-md-9 text-left bottom-space-small">
+				The LA South Bay Chapter of the Awesome Foundation awarded BOOA its first grant in November 2016.
+			</div>
 		</div>
 	</div>
 	<div class="row text-center top-space-small right-space left-space" id="supporters">
 		<h2><strong>Supporters</strong></h2>
 	</div>
 	<div class="row text-center right-space left-space">
-		<div class="col-md-4 text-center">University of California at Los Angeles (UCLA) School of Law</div>
-		<div class="col-md-4 text-center">Graduate Institute of International and Development Studies</div>
+		<div class="col-md-4 text-center">Gabriel Martinez</div>
+		<div class="col-md-4 text-center">Craig Hill</div>
 		<div class="col-md-4 text-center">Aminata Lemdjou</div>
 	</div>
 	<div class="row text-center top-space-small right-space left-space" id="supporters">
@@ -49,10 +120,9 @@
 		<div class="col-md-4 text-center">Gertrude Silvis</div>
 		<div class="col-md-4 text-center">Ray Oglesby</div>
 	</div>
-	<div class="row text-center top-space-small right-space left-space" id="supporters">
+	<div class="row text-center top-space-small right-space left-space bottom-space" id="supporters">
 		<div class="col-md-4 text-center">James Smyth</div>
-		<div class="col-md-4 text-center">Craig Hill</div>
-		<div class="col-md-4 text-center">Gabriel Martinez</div>
+		<div class="col-md-4 text-center"></div>
+		<div class="col-md-4 text-center"></div>
 	</div>
-</div>
 {% endblock %}
