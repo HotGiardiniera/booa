@@ -2,7 +2,6 @@ import os
 from flask import Flask
 from flask.ext.mail import Mail
 from booa.main.views import *
-# test
 
 app = Flask(__name__)
 app.register_blueprint(main)
