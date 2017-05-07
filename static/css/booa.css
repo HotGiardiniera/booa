@@ -51,11 +51,25 @@ nav.navbar {
 	margin-left: 25px;
 }
 
+.navbar > .container div.navbar-language {
+	font-size: 18px;
+	margin-top: 16px;
+}
+
+.navbar > .container div.french{
+	margin-left: 10px;
+}
+
+.navbar > .container div.english{
+	margin-left: 25px;
+}
+
 .navbar > .container ul {
 	margin-right: 55px;
 }
 
 .navbar-brand,
+.navbar-language,
 .navbar-nav li a {
     line-height: 35px;
     color: #000;

@@ -8,21 +8,40 @@
     	<link rel='shortcut icon' href='{{ STATIC_URL }}favicon.ico' type='image/x-icon'/ >
     	<script src="{{ STATIC_URL }}js/vendors/jquery.min.js"></script>
     	<script src="{{ STATIC_URL }}bootstrap3/js/bootstrap.min.js"></script>
+    	<style type="text/css">
+    		{% set french  = request.args.get('fr') %}
+    		{% set french_get  = "?fr=1" %}
+    		{% if french %}
+	    		.en {
+	    			display: none;
+	    		}
+    		{% else %}
+	    		.fr {
+	    			display: none;
+	    		}
+    		{% endif  %}
+    	</style>
 	</head>
 	<body>
 		<div class="navbar-wrapper">
 			<div class="container">
 				<nav class="navbar navbar-inverse navbar-static-top">
 					<div class="container">
-						<div class="navbar-header navbar-brand"><a {% if tab == "home" %} class="active" {% endif %} href="{{ url_for('main.home') }}">Bras Ouverts – Open Arms</a></div>
+						<div class="navbar-header navbar-brand"><a {% if tab == "home" %} class="active" {% endif %} href="{{ url_for('main.home') }}{% if french %}{{ french_get }}{% endif %}">Bras Ouverts – Open Arms</a></div>
+						<div class="navbar-header navbar-language english">
+							<a {% if not french %} class="active" {% endif %} href="{{ request.path }}">En</a>
+						</div>
+						<div class="navbar-header navbar-language french">
+							<a {% if french %} class="active" {% endif %} href="{{ request.path }}?fr=1">Fr</a>
+						</div>
 						<div>
 							<ul class="nav navbar-nav pull-right">
-								<li {% if tab == "vision" %} class="active" {% endif %}><a href="{{ url_for('main.vision') }}">Vision</a></li>
-								<li {% if tab == "projects" %} class="active" {% endif %}><a href="{{ url_for('main.projects') }}">Projects</a></li>
-								<li {% if tab == "team" %} class="active" {% endif %}><a href="{{ url_for('main.team') }}">Team</a></li>
-								<li {% if tab == "contribute" %} class="active" {% endif %}><a href="{{ url_for('main.contribute') }}">Contribute</a></li>
-								<li {% if tab == "contact" %} class="active" {% endif %}><a href="{{ url_for('main.contact') }}">Contact</a></li>
-								<li><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2PWH9NN5V9DZY">Donate</a></li>
+								<li {% if tab == "vision" %} class="active" {% endif %}><a href="{{ url_for('main.vision') }}{% if french %}{{ french_get }}{% endif %}">Vision</a></li>
+								<li {% if tab == "projects" %} class="active" {% endif %}><a href="{{ url_for('main.projects') }}{% if french %}{{ french_get }}{% endif %}">Projects</a></li>
+								<li {% if tab == "team" %} class="active" {% endif %}><a href="{{ url_for('main.team') }}{% if french %}{{ french_get }}{% endif %}">Team</a></li>
+								<li {% if tab == "contribute" %} class="active" {% endif %}><a href="{{ url_for('main.contribute') }}{% if french %}{{ french_get }}{% endif %}">Contribute</a></li>
+								<li {% if tab == "contact" %} class="active" {% endif %}><a href="{{ url_for('main.contact') }}{% if french %}{{ french_get }}{% endif %}">Contact</a></li>
+								<li><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=2PWH9NN5V9DZY">Donate</a></li>
 							</ul>
 						</div>
 					</div>
