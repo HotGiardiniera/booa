@@ -14,10 +14,6 @@ def home():
 def vision():
     return render_template("vision.html", tab="vision")
 
-@main.route('/background')
-def background():
-    return render_template("background.html", tab="background")
-
 @main.route('/projects')
 def projects():
     return render_template("projects.html", tab="projects")
